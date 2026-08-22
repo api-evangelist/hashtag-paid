@@ -1,0 +1,19 @@
+generated: '2026-08-22'
+method: searched
+source: https://hashtagpaid.com/
+plan_count: 0
+note: >-
+  #paid publishes no pricing or plans page. https://hashtagpaid.com/pricing returns HTTP 200 but
+  the body is byte-for-byte identical to the homepage (178,108 bytes) — a Webflow soft-404, not a
+  pricing page — and no pricing link appears in the site navigation or footer. There is also no
+  API product to price: the platform is sold to brands and agencies through a "Book a demo" /
+  sales motion, and creators join free. Recorded as an honest zero.
+pricing_model: contact-sales
+plans: []
+evidence:
+- url: https://hashtagpaid.com/pricing
+  status: 200
+  finding: soft-404, identical bytes to https://hashtagpaid.com/
+- url: https://hashtagpaid.com/
+  status: 200
+  finding: no pricing link in nav or footer

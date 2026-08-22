@@ -1,17 +1,34 @@
 aid: hashtag-paid
 name: Hashtag Paid
-description: 'Hashtag Paid is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Hashtag Paid Inc., which trades as #paid, is a Toronto-headquartered creator marketing platform
+  that connects brands and agencies with social media creators. The product is a marketplace and
+  campaign workspace: brands brief a campaign, are matched to vetted creators, review and approve
+  content, license and amplify that content as paid social advertising across Meta, TikTok, YouTube,
+  Snapchat and Pinterest, then measure results and pay creators automatically. #paid is a badged
+  TikTok Marketing Partner and consumes the social platforms' advertising APIs on its customers'
+  behalf. It runs as an end-user SaaS product with brand and creator web applications; as of this
+  profile it publishes no public developer program, API reference, or machine-readable contract.
+image: https://cdn.prod.website-files.com/5c34f4c0ee3329913fc72eac/651c65cce2071a7de8b14a73_open-graph.webp
 url: https://raw.githubusercontent.com/api-evangelist/hashtag-paid/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
+x-source-url: https://forgeglobal.com/hashtag-paid_stock/
+x-tier: profiled
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Creator Marketing
+- Influencer Marketing
+- Marketing
+- Advertising
+- Social Media
+- Content
+- Marketplace
+- Creator Economy
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,54 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hashtag-paid-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/hashtag-paid_stock/
+  url: https://hashtagpaid.com/
+- type: Support
+  url: https://support.hashtagpaid.com/hc/en-us
+- type: Blog
+  url: https://hashtagpaid.com/banknotes
+- type: TermsOfService
+  url: https://hashtagpaid.com/terms
+- type: PrivacyPolicy
+  url: https://hashtagpaid.com/privacy
+- type: Login
+  url: https://app.hashtagpaid.app/sign-in
+- type: GitHubOrganization
+  url: https://github.com/hashtagpaid
+- type: AIPrinciples
+  url: https://hashtagpaid.com/ai-principles
+- type: Plans
+  url: plans/hashtag-paid-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/hashtag-paid-rate-limits.yml
+- type: LLMsTxt
+  url: llms/hashtag-paid-llms.txt
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    #paid ships only end-user brand and creator web apps — hashtagpaid.com has no /developers,
+    /api or /docs route (all 404), its two public GitHub repos are an org README and a 2023
+    notion-tracker, and the private backend at api.hashtagpaid.app 404s every spec path — the
+    company consumes the TikTok/Meta advertising APIs rather than publishing one of its own.
+  evidence:
+  - url: https://hashtagpaid.com/developers
+    status: 404
+  - url: https://hashtagpaid.com/docs
+    status: 404
+  - url: https://hashtagpaid.com/openapi.json
+    status: 404
+  - url: https://api.hashtagpaid.app/openapi.json
+    status: 404
+  - url: https://creator.hashtagpaid.app/openapi.json
+    status: 200
+  - url: https://hashtagpaid.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-22'

@@ -1,0 +1,110 @@
+generated: '2026-08-22'
+method: probed
+source: >-
+  Direct HTTP probes of /.well-known/* and /ai-plugin.json on every #paid host reachable
+  from apis.yml and from the sign-in links on hashtagpaid.com.
+summary: >-
+  No well-known document is served on any #paid host. Every RFC 8615 path returns 404 on
+  hashtagpaid.com (Webflow), app.hashtagpaid.app and api.hashtagpaid.app. creator.hashtagpaid.app
+  is a single-page app that answers 200 with the same 15,875-byte login HTML for every unknown
+  path, so its 200s are soft-404s, not documents. No WellKnown or SecurityTxt pointer is emitted.
+hosts:
+- host: hashtagpaid.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /ai-plugin.json
+    status: 404
+    file: null
+- host: app.hashtagpaid.app
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /ai-plugin.json
+    status: 404
+    file: null
+- host: creator.hashtagpaid.app
+  note: >-
+    SPA catch-all. /.well-known/* paths return a real 404, but /ai-plugin.json (and every other
+    non-well-known path) returns 200 with the login page HTML. Treated as a miss, not a document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /ai-plugin.json
+    status: 200
+    file: null
+    soft_404: true
+- host: api.hashtagpaid.app
+  note: >-
+    Resolves and is served by a Google front end, but every probed path returns a genuine
+    404 body. It is the private backend for the #paid web applications; no public surface.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /ai-plugin.json
+    status: 404
+    file: null

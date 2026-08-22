@@ -1,0 +1,19 @@
+generated: '2026-08-22'
+method: searched
+source: https://hashtagpaid.com/
+limit_count: 0
+note: >-
+  No rate limits are documented because #paid publishes no public API. No developer portal,
+  API reference, or machine-readable contract was found on hashtagpaid.com, app.hashtagpaid.app,
+  creator.hashtagpaid.app or api.hashtagpaid.app, so there are no published limits, no documented
+  response headers (X-RateLimit-*, RateLimit-*, Retry-After) and no documented exhaustion status
+  code to record. Recorded as an honest zero rather than omitted.
+limits: []
+headers: []
+evidence:
+- url: https://hashtagpaid.com/developers
+  status: 404
+- url: https://hashtagpaid.com/docs
+  status: 404
+- url: https://api.hashtagpaid.app/
+  status: 404
