@@ -9,6 +9,17 @@ description: >-
   TikTok Marketing Partner and consumes the social platforms' advertising APIs on its customers'
   behalf. It runs as an end-user SaaS product with brand and creator web applications; as of this
   profile it publishes no public developer program, API reference, or machine-readable contract.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/5c34f4c0ee3329913fc72eac/651c65cce2071a7de8b14a73_open-graph.webp
 url: https://raw.githubusercontent.com/api-evangelist/hashtag-paid/refs/heads/main/apis.yml
 x-type: company
